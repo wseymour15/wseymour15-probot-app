@@ -7,7 +7,7 @@ module.exports = app => {
   app.log('HELLOOOOOO this a test')
 
   app.on('issues.opened', async context => {
-    const issueComment = context.issue({ body: 'Thanks for opening this issue!' })
+    const issueComment = context.issue({ body: 'This is a test.' })
     return context.github.issues.createComment(issueComment)
   })
 
